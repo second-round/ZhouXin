@@ -34,40 +34,4 @@ public class PersenterImpl implements Persenter{
             }
         });
     }
-
-//
-//    @Override
-//    public void opinion(String phone, String pass) {
-//        model.requestData(phone, pass, new CallBack() {
-//            @Override
-//            public void setData(boolean result) {
-//                view.showResponseData(result);
-//            }
-//
-//            @Override
-//            public void setbean(UserBean userBean) {
-////                model.getbean(userBean);
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public void option(String path, Object o) {
-//        model.getdata(path, o, new CallBack() {
-//            @Override
-//            public void setData(boolean result) {
-//
-//            }
-//
-//            @Override
-//            public void setbean(UserBean userBean) {
-//
-//            }
-//        });
-//    }
-//
-//    public void ondetouch() {
-//        model=null;
-//    }
-
 }

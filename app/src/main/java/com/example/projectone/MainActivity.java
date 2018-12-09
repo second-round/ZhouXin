@@ -31,24 +31,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initiew();
-//        checkLogin();
+        checkLogin();
     }
 
     private void initiew() {
         name=findViewById(R.id.name);
         pass=findViewById(R.id.editText2);
         button=findViewById(R.id.button3);
-        login=findViewById(R.id.button2);
+        login=findViewById(R.id.button);
         pwd=findViewById(R.id.checkBox);
         sharedPreferences=getSharedPreferences("user",MODE_PRIVATE);
         edit = sharedPreferences.edit();
         logins=findViewById(R.id.checkBox2);
-        zhu=findViewById(R.id.button2);
         pwd.setOnClickListener(this);
         logins.setOnClickListener(this);
         button.setOnClickListener(this);
         persenter=new PersenterImpl(this);
         zhu.setOnClickListener(this);
+        login.setOnClickListener(this);
 
     }
     private void checkLogin() {
@@ -60,7 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         boolean logins = sharedPreferences.getBoolean("logins", false);
         if (logins){
-            checkPermission();
+            Intent intent1=new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent1);
+            finish();
         }
     }
     @Override
@@ -162,9 +164,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             edit.putBoolean("logins",false);
         }
         edit.commit();
-    }
-
-    private void checkPermission() {
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

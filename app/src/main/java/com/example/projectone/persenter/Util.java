@@ -37,43 +37,4 @@ public class Util {
         return (!TextUtils.isEmpty(phone)&&phone.length()==11);
     }
 
-
-//    public static Class sengMessage(String string, String string1, final String path, final Class aClass) {
-//        Class clazz =null;
-//        new AsyncTask<String, Void, Class>() {
-//            @Override
-//            protected Class doInBackground(String... strings) {
-//                try {
-//                    URL url=new URL(path);
-//                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-//                    urlConnection.setReadTimeout(5000);
-//                    urlConnection.setConnectTimeout(5000);
-//                    int responseCode = urlConnection.getResponseCode();
-//                    if (responseCode==200){
-//                        String s=stream2string(urlConnection.getInputStream());
-//                        clazz = new Gson().fromJson(s, aClass);
-//                        return (Class) o;
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//                return null;
-//            }
-//
-//            @Override
-//            protected void onPostExecute(Class aClass) {
-//                super.onPostExecute(aClass);
-//            }
-//        }.execute("");
-//    }
-//
-//    private static String stream2string(InputStream inputStream) throws IOException {
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-//        StringBuffer stringBuffer = new StringBuffer();
-//        String str=null;
-//        while ((str=reader.readLine())!=null){
-//            stringBuffer.append(str);
-//        }
-//        return stringBuffer.toString();
-//    }
 }

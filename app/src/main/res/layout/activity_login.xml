@@ -22,6 +22,7 @@
             android:id="@+id/button"
             android:layout_height="match_parent"
             android:layout_width="0dp"
+            android:button="@null"
             android:layout_weight="1"
             android:background="@drawable/select"
             android:text="首页"
@@ -36,6 +37,7 @@
             android:background="@drawable/select"
             android:layout_weight="1"
             android:gravity="center"
+            android:button="@null"
             />
 
     </RadioGroup>
